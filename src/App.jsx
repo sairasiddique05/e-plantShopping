@@ -1,8 +1,10 @@
 
 import React, { useState } from 'react';
-import ProductList from './ProductList';
+
 import './App.css';
-import AboutUs from './AboutUs';
+import AboutUs from './aboutus';
+import ProductList from './assets/component/product-list';
+import { airPurifyingPlants } from './assets/data';
 
 function App() {
   
@@ -37,7 +39,7 @@ function App() {
 
       </div>
       <div className={`product-list-container ${showProductList ? 'visible' : ''}`}>
-        <ProductList onHomeClick={handleHomeClick}/>
+        <ProductList products={airPurifyingPlants} onHomeClick={handleHomeClick}/>
       </div>
     </div>
   );
